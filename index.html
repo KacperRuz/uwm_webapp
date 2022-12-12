@@ -4,17 +4,19 @@
   <title>KR_163293_1_0</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: #98C9A3">
+<body style="background-color: wheat">
 
-<div class="container-fluid">
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #77BFA3">
+<nav class="navbar fixed-top navbar-expand navbar-light" id="navbar" style="background-color: #D33F49">
     <a class="navbar-brand" href="#">
-        <img src="logo.png" width="50" height="50" alt="">
+        <img src="logo.png" width="25" height="25" alt="">
         Komputer moją pasją
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     
@@ -27,63 +29,101 @@
             <a class="nav-link" href="#">Galeria</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">O nas</a>
+            <a class="nav-link" href="about.html">O nas</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Kontakt</a>
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
         </li>
         </ul>
+        <div id="toogler_back">
+            <img src="toogler_back.png" style="width:54px">
+        </div>
+        <div id="toogleMode" onclick="modeToogler()" class="toogler-ball">
+            <img src="toogler_ball.png" style="width:20px">
+        </div>
     </div>
 </nav>
+
+
+<div class="d-flex justify-content-center" style="font-size:500%; margin-top: 5%; text-align: center;">
+    KOMPUTER MOJĄ PASJĄ
 </div>
 
-<div class="container-fluid" style="background-color: #98C9A3">
+<div id="blok1" class="container-fluid" style="background-color: #f5deb3; padding: 0px; margin-top: 5%;">
 
   
-<div class="container-fluid" style="background-color: #BFD8BD; margin-top: 16px;">
-  <div class="row" style="padding-top: 32px;">
-    <div class="col-sm-4">
-        <div class="d-flex justify-content-center">
-            <h2>Interesujesz się komputerami?</h2>
-        </div>
-        <div class="d-flex justify-content-center">
-            <h5>Dołącz do nas i pomagaj innym!</h5>
-        </div>
-        <div class="d-flex justify-content-center">
-            <img src="pc_fix.png" style="width: 60%;">
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="d-flex justify-content-center">
-            <h2 style="text-align: center;">Masz problemy z wyborem podzespołów?</h2>
-        </div>
-        <div class="d-flex justify-content-center">
-            <h5 style="text-align: center;">Zestaw idealny już na Ciebie czeka!</h5>
-        </div>
-        <div class="d-flex justify-content-center">
-            <img src="pc.png" style="width: 50%;">
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="d-flex justify-content-center">
-            <h2 style="text-align: center;">Nie możesz poradzić sobie z usterką?</h2>
-        </div>
-        <div class="d-flex justify-content-center">
-            <h5 style="text-align: center;">Skontaktuj się z nami lub skorzystaj z naszych narzędzi!</h5>
-        </div>
-        <div class="d-flex justify-content-center">
-            <img src="think.png" style="width: 60%;">
-        </div>
-    </div>
-  </div>
-</div>
+<div class="container-fluid">
 
-<div class="jumbotron text-center" style="background-color: #BFD8BD; margin-bottom: 0px; font-size: x-large;">
+    <div class="row" style="padding-top: 32px;">
+    <div class="col-sm-4">
+        <div class="d-flex justify-content-center" style="text-align: center">
+            <h1>Interesujesz się komputerami?</h1>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="d-flex justify-content-center" style="text-align: center">
+            <h1 style="text-align: center;">Masz problemy z wyborem podzespołów?</h1>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="d-flex justify-content-center" style="text-align: center">
+            <h1 style="text-align: center;">Nie możesz poradzić sobie z usterką?</h1>
+        </div>
+    </div>
+    </div>
+
+    <div class="row" style="padding-top: 32px;">
+    <div class="col-sm-4">
+        <div class="d-flex justify-content-center">
+        <img src="pc_fix.png" style="width: 60%;">
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="d-flex justify-content-center">
+        <img src="pc.png" style="width: 50%;">
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="d-flex justify-content-center">
+        <img src="think.png" id="toogleMode" style="width: 60%;">
+        </div>
+        <script>
+            $("toogleMode").on("click", function(){
+            $(this).animate({
+                width: "500px",
+                opacity: 0.4,
+                fontSize: "3em",
+                borderwidth: "10px"
+            }, 1500);
+            });
+        
+        </script>
+    </div>
+    <div class="col-sm-4">
+        <div class="d-flex justify-content-center" style="margin-top:2%; text-align: center">
+            <h3>Dołącz do nas i pomagaj innym!</h3>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="d-flex justify-content-center" style="margin-top:2%; text-align: center">
+            <h3>Zestaw idealny już na Ciebie czeka!</h3>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="d-flex justify-content-center" style="margin-top:2%; text-align: center">
+            <h3>Skontaktuj się z nami lub skorzystaj z naszych narzędzi!</h3>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+<div id="blok2" class="jumbotron text-center" style="background-color: wheat; margin-top: 10%; font-size: x-large;">
     <h1>Zainteresowała Cię nasza działalność?</h1><br>
     <p>Jeżeli zmagasz się z usterką, szukasz speca od napraw lub nerda, 
-        który dobierze Ci najlepszy zestaw przejdź do zakładki Usługi i narzędzia.</p> 
+        który dobierze Ci najlepszy zestaw przejdź do zakładki <a href="uslugi.html">Usługi i narzędzia.</a></p> 
     <p>Jeśli jesteś jednym z wyżej wymienionych oraz chcesz dołaczyć do naszego zespołu skontaktuj się z nami 
-        przez formularz kontakowy dostępny w zakładce Kontakt.</p>
+        przez <a href="kontakt.html">formularz kontakowy.</a></p>
 </div>
 
 

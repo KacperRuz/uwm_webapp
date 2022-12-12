@@ -1,0 +1,18 @@
+.soft-item{
+  font-size: xx-large;
+  margin-bottom: 0px;
+}
+
+.description {
+    color: black;
+  }
+  
+.description em {
+    color: tomato;
+    font-style: normal;
+  }
+
+.toogler-ball{
+    position: relative;
+    right: 22px;
+}

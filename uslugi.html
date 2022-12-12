@@ -4,14 +4,16 @@
   <title>KR_163293_1_0</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: #98C9A3">
+<body style="background-color: wheat">
 
-<div class="container-fluid">
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #77BFA3">
+<nav class="navbar fixed-top navbar-expand navbar-light" id="navbar" style="background-color: #D33F49;">
     <a class="navbar-brand" href="index.html">
-        <img src="logo.png" width="50" height="50" alt="">
+        <img src="logo.png" width="25" height="25" alt="">
         Komputer moją pasją
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,53 +29,62 @@
             <a class="nav-link" href="#">Galeria</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">O nas</a>
+            <a class="nav-link" href="about.html">O nas</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Kontakt</a>
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
         </li>
         </ul>
+        <div id="toogler_back">
+            <img src="toogler_back.png" style="width:54px">
+        </div>
+        <div id="toogleMode" onclick="modeToogler()" class="toogler-ball">
+            <img src="toogler_ball.png" style="width:20px">
+        </div>
     </div>
 </nav>
-</div>
 
-<div class="container-fluid" style="background-color: #98C9A3">
+<div class="container-fluid" style="background-color: wheat; padding: 0px; margin-top: 15%;">
 
-<div class="container-fluid" style="background-color: #BFD8BD; margin-top: 16px;">
-    <div class="jumbotron text-center" style="background-color: #BFD8BD; margin-bottom: 0px; font-size:x-large;">
-        <h1>Wszystkie nasze usługi są zupełnie darmowe.</h1>
-        <h5>Pracujemy po godzinach całkowicie hobbystycznie.</h5><br>
-        Co to oznacza dla Ciebie?
-        Czas odpowiedzi nie jest z góry określony. Proste sprawy zostaną prawdopobnie rozwiązane od ręki.<br>
-        Zjedź myszkiem w dół, a znajdziesz wiele przydatnych narzędzi, dzięki którym unikniesz wysłania choćby jednej wiadomości.<br>
+<div class="container-fluid">
+    <div class="jumbotron text-center" style="background-color: wheat; margin-bottom: 0px; font-size:x-large;">
+        <div style="font-size:300%;">Wszystkie nasze usługi są zupełnie darmowe.</div>
+        <h1 style="color:tomato">Pracujemy po godzinach całkowicie hobbystycznie.</h1><br>
+        <div class="description">Co to oznacza dla Ciebie?
+        Czas odpowiedzi <em>nie jest z góry określony.</em> Proste sprawy zostaną prawdopobnie rozwiązane od ręki.<br>
+        <em>Zjedź myszkiem w dół</em>, a znajdziesz wiele przydatnych narzędzi, dzięki którym unikniesz wysłania choćby jednej wiadomości.<br>
         Jeżeli po kontancie ze specjalistą okaże się, że niezbędna będzie wysyłka, któregoś z podzespołów proces na pewno mocno się przedłuży.<br>
-        Zawsze jesteśmy szczęśliwi gdy ktoś rzuci grosza na nasz szczytny cel, ale nie ma to wpływu na kolejność obłsugi.<br>
+        Zawsze jesteśmy szczęśliwi gdy ktoś rzuci grosza na nasz szczytny cel, ale nie ma to wpływu na kolejność obsługi.<br></div>
     </div>
 
-    <div class="jumbotron text-center" style="background-color: #BFD8BD; margin-bottom: 0px; font-size:x-large;">
-        <h1>Czego Ci dziś trzeba?</h1>
-        <div class="row" style="padding-top: 32px;">
+    <div class="jumbotron text-center" style="background-color: wheat; margin-top: 10%; font-size:x-large;">
+        <div style="font-size:250%;">Czego Ci dziś trzeba?</div>
+        <div class="row" style="padding-top: 48px;">
             <div class="col-sm-4">
-                <h2>Składam komputer stacjonarny.</h2>
-                <a href="pcbuilder.html">
+                <h2>Składam komputer stacjonarny.(WIP)</h2>
+                <a href="#">
                 <img src="screwdriver.png" style="width: 60%;">
-                </a><br>
+                </a><br><br>
                 Mamy dla Ciebie świetne narzędzie, które będzie na bieżąco zliczać niezbędny budżet oraz moc Twojego przyszłego zestawu.
             </div>
             <div class="col-sm-4">
-                <h2>Mój komputer miewa małe problemy.</h2>
-                <img src="thisisfine.png" style="width: 60%;"><br>
+                <h2>Mój komputer miewa małe problemy.(WIP)</h2>
+                <a href="#">
+                <img src="thisisfine.png" style="width: 60%;"><br><br>
+                </a>
                 Odwiedź naszą stronę poświęconą najczęściej spotykanym problemom z komputerami stacjonarnymi i laptopami.
             </div>
             <div class="col-sm-4">
                 <h2>Szukam zaufanego software'u.</h2>
-                <img src="diagnosis.png" style="width: 60%;"><br>
+                <a href="software.html">
+                <img src="diagnosis.png" style="width: 60%;"><br><br>
+                </a>
                 Pod tym linkiem znajdziesz używane przez nas programy diagnostyczne oraz oficjalne źródła dostawców sterowników.
             </div>
         </div>
         <br><br>
         <h1>Jeśli problem jest poważniejszy:</h1>
-        Przejdź do zakładki Kontakt i wypełnij formularz a my się z tobą skontaktujemy.
+        Przejdź do zakładki <a href ="kontakt.html">Kontakt</a> i wypełnij formularz a my się z tobą skontaktujemy.
     </div>
 </div>
 
